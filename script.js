@@ -59,6 +59,27 @@ window.onload = function () {
       } else {
         alert("숫자를 먼저 입력해 주세요.");
       }
+
+      if (numberTwo) {
+        operator = op;
+        $operator.value = op;
+
+        if (operator === "+") {
+          $result.value = Number(numberOne) + Number(numberTwo);
+          numberOne = Number(numberOne) + Number(numberTwo);
+        } else if (operator === "-") {
+          $result.value = Number(numberOne) - Number(numberTwo);
+          numberOne = Number(numberOne) - Number(numberTwo);
+        } else if (operator === "x") {
+          $result.value = Number(numberOne) * Number(numberTwo);
+          numberOne = Number(numberOne) * Number(numberTwo);
+        } else {
+          $result.value = Number(numberOne) / Number(numberTwo);
+          numberOne = Number(numberOne) / Number(numberTwo);
+        }
+
+        numberTwo = "";
+      }
     };
   };
 
@@ -82,13 +103,19 @@ window.onload = function () {
 
     if (operator === "+") {
       $result.value = Number(numberOne) + Number(numberTwo);
+      numberOne = Number(numberOne) + Number(numberTwo);
     } else if (operator === "-") {
       $result.value = Number(numberOne) - Number(numberTwo);
+      numberOne = Number(numberOne) - Number(numberTwo);
     } else if (operator === "x") {
       $result.value = Number(numberOne) * Number(numberTwo);
+      numberOne = Number(numberOne) * Number(numberTwo);
     } else {
       $result.value = Number(numberOne) / Number(numberTwo);
+      numberOne = Number(numberOne) / Number(numberTwo);
     }
+
+    numberTwo = "";
   };
 
   document.querySelector("#equal").addEventListener("click", onClickEqual);

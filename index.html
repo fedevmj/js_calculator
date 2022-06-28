@@ -4,8 +4,14 @@
   <meta charset="utf-8">
   <title>계산기</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
     * {
       box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
     }
 
     .calculator {
@@ -33,13 +39,13 @@
       width: 50px;
       height: 50px;
       margin: 5px;
-      background-color: #cbc0d3;
+      background-color: #dee2ff;
       border-color: #003049;
       cursor: pointer;
     }
 
     input {
-      background-color: #cbc0d3;
+      background-color: #dee2ff;
       border-color: #003049;
     }
   </style>
@@ -50,7 +56,11 @@
 <!--계산기버튼구현-->
 
 <body>
+
   <div class="calculator">
+
+    <h1>재미있는 계산기🔢</h1>
+
     <input readonly id="operator">
     <input readonly type="number" id="result">
     <div class="row">
